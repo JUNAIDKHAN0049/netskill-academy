@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetSkill Academy - Self-Paced Learning Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="brand-logo">NetSkill <span>Academy</span></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#courses" class="nav-link">Courses</a>
+                <a href="#instructor" class="nav-link">Instructor</a>
+                <a href="#contact" class="nav-link nav-btn">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <span class="badge">Advanced Learning Engine (200+ MCQs Master Tracks)</span>
+            <h1>Master In-Demand Technical Skills at Your Own Pace</h1>
+            <p>Gain industry-aligned knowledge in Networking, Full-Stack Web Development, and Fundamental Computing with verified professional certification.</p>
+            <div class="hero-actions">
+                <a href="#courses" class="btn btn-primary">Explore Courses</a>
+                <a href="#instructor" class="btn btn-secondary">Meet the Instructor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="section courses-section" id="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Learning Tracks</h2>
+                <p>Each track features an extensive 200+ MCQ question bank. Pass the evaluation to earn your elite verifiable certificate.</p>
+            </div>
+            <div class="courses-grid">
+                <!-- Course 1 -->
+                <article class="course-card">
+                    <div class="card-tag">Networking</div>
+                    <h3>CCNA Certification Track</h3>
+                    <p class="card-desc">Master enterprise networking, OSPF/EIGRP routing, VLAN trunking, ACLs, and NAT configurations.</p>
+                    <ul class="module-list">
+                        <li>Routing Protocols & Subnetting</li>
+                        <li>Switching & VLAN Architectures</li>
+                        <li>Access Control Lists (ACLs)</li>
+                        <li>Network Address Translation (NAT)</li>
+                        <li>200+ Dynamic Exam Question Bank</li>
+                    </ul>
+                    <button class="btn btn-card" onclick="openQuizModal('ccna')">Start Track & Exam</button>
+                </article>
+
+                <!-- Course 2 -->
+                <article class="course-card">
+                    <div class="card-tag">Software Engineering</div>
+                    <h3>Web Development Engineering</h3>
+                    <p class="card-desc">Build modern web applications from HTML/CSS front-end design to scalable backend Java frameworks.</p>
+                    <ul class="module-list">
+                        <li>HTML5 & CSS3 Advanced Layouts</li>
+                        <li>JavaScript ES6+ & DOM Manipulation</li>
+                        <li>RESTful APIs & Asynchronous Processing</li>
+                        <li>Spring Boot Enterprise Framework</li>
+                        <li>200+ Dynamic Exam Question Bank</li>
+                    </ul>
+                    <button class="btn btn-card" onclick="openQuizModal('webdev')">Start Track & Exam</button>
+                </article>
+
+                <!-- Course 3 -->
+                <article class="course-card">
+                    <div class="card-tag">Fundamentals</div>
+                    <h3>Basic Computer Skills</h3>
+                    <p class="card-desc">Essential practical knowledge for hardware troubleshooting, modern operating systems, and office tools.</p>
+                    <ul class="module-list">
+                        <li>Computer Hardware Architecture</li>
+                        <li>Windows OS Management & Config</li>
+                        <li>Microsoft Word & Advanced Formatting</li>
+                        <li>Microsoft Excel Data Analysis & Formulas</li>
+                        <li>200+ Dynamic Exam Question Bank</li>
+                    </ul>
+                    <button class="btn btn-card" onclick="openQuizModal('basics')">Start Track & Exam</button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section class="section instructor-section" id="instructor">
+        <div class="container">
+            <div class="instructor-card">
+                <div class="instructor-avatar">
+                    <div class="avatar-placeholder">HMJS</div>
+                </div>
+                <div class="instructor-details">
+                    <span class="badge-sub">Lead Instructor & Mentor</span>
+                    <h2>Hafiz Muhammad Junaid Shafique</h2>
+                    <p>Dedicated technical educator and systems specialist specializing in Network Architecture, Software Systems, and Digital Literacy. Hafiz Muhammad Junaid Shafique provides structured, industry-level self-paced curricula designed to bridge academic concepts with real-world technical execution.</p>
+                    <div class="instructor-contact">
+                        <div class="contact-item">
+                            <strong>Direct Contact:</strong> <a href="mailto:jshafique53@gmail.com">jshafique53@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Signatory Authority:</strong> 3 Complete Enterprise Learning Tracks
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; NetSkill Academy. Designed for Self-Paced Academic Excellence.</p>
+            <p>Instructor: Hafiz Muhammad Junaid Shafique | Support: jshafique53@gmail.com</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Quiz Modal -->
+    <div class="modal" id="quizModal" aria-hidden="true">
+        <div class="modal-overlay" onclick="closeQuizModal()"></div>
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeQuizModal()">&times;</button>
+            <div id="quizContent"></div>
+        </div>
+    </div>
+
+    <!-- Certificate Generator Modal (Elite Design) -->
+    <div class="modal" id="certificateModal" aria-hidden="true">
+        <div class="modal-overlay" onclick="closeCertificateModal()"></div>
+        <div class="modal-container modal-lg">
+            <button class="modal-close no-print" onclick="closeCertificateModal()">&times;</button>
+            <div class="no-print modal-header-actions">
+                <h3>Congratulations! Certificate Earned Successfully</h3>
+                <button class="btn btn-primary" onclick="window.print()">Print / Save Elite PDF</button>
+            </div>
+            
+            <!-- Professional Luxury Certificate Frame -->
+            <div class="certificate-frame" id="certificateFrame">
+                <div class="cert-outer-border">
+                    <div class="cert-inner-border">
+                        <div class="cert-watermark">NETSKILL</div>
+                        <div class="cert-header">
+                            <div class="cert-academy-badge">NETSKILL ACADEMY CERTIFIED</div>
+                            <h1 class="cert-title">Certificate of Completion</h1>
+                            <p class="cert-subtitle">This prestigious credential is proudly presented to</p>
+                        </div>
+                        <div class="cert-body">
+                            <h2 class="cert-recipient" id="certRecipientName">Student Name</h2>
+                            <p class="cert-text">For successfully demonstrating high-level academic mastery and passing the rigorous 200+ MCQ comprehensive assessment for the professional training track:</p>
+                            <h3 class="cert-course" id="certCourseTitle">Course Title</h3>
+                        </div>
+                        <div class="cert-footer">
+                            <div class="cert-meta-group">
+                                <p><strong>Issue Date:</strong> <span id="certIssueDate">Date</span></p>
+                                <p><strong>Credential ID:</strong> <span id="certCredentialId">NSA-000000</span></p>
+                                <p><strong>Status:</strong> <span style="color: #059669; font-weight: bold;">Verified & Approved</span></p>
+                            </div>
+                            <div class="cert-seal-box">
+                                <div class="gold-seal">OFFICIAL SEAL</div>
+                            </div>
+                            <div class="cert-signature-block">
+                                <div class="signature-line">
+                                    <span class="signature-font">Hafiz M. Junaid Shafique</span>
+                                </div>
+                                <p class="sig-name"><strong>Hafiz Muhammad Junaid Shafique</strong></p>
+                                <p class="sig-title">Lead Instructor & Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
